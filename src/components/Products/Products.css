@@ -1,0 +1,48 @@
+.products-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+
+.product-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    border: 1px solid black;
+    width: 400px;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 5px;
+    background-color: #404040;
+}
+
+.info {
+    display: flex;
+    font-family: 'Lobster', cursive;
+    justify-content: center;
+    font-size: 18px;
+    color: aqua;
+}
+
+.price {
+    display: flex;
+    font-family: 'Lobster', cursive;
+    justify-content: center;
+    color: aqua;
+}
+
+.products-img {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 2px;
+    border: 5px ridge aqua;
+    margin: 0 auto;
+}
+
+hr {
+    position: relative;
+    top: 10px;
+    text-decoration: none;
+    color: white;
+}
+

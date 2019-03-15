@@ -1,0 +1,7 @@
+.products-wrapper {
+    display: flex;
+}
+
+body {
+    background: linear-gradient(to bottom right, #D3F1F3, aqua, #D3F1F3, aqua,#D3F1F3) ;
+}

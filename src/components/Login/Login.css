@@ -1,0 +1,70 @@
+input:focus {
+    outline: none;
+}
+
+.wrapper {
+    display: flex;
+}
+.username {
+  margin-right: 10px;
+  height: 25px;
+  border-radius: 10px;
+  width: 175px;
+}
+
+.username:hover {
+    border: 2px solid aqua;
+}
+
+.password {
+  margin-right: 10px;
+  height: 25px;
+  border-radius: 10px;
+  width: 175px;
+}
+
+.password:hover {
+    border: 2px solid aqua;
+}
+
+.login-btn {
+  margin-right: 10px;
+  height: 30px;
+  width: 75px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: 'Lobster', cursive;
+  border: 1px solid black;
+
+}
+
+.login-btn:hover {
+    background-color: aqua;
+    transition: 1s;
+}
+
+
+
+.signUp-btn {
+  margin-right: 25px;
+  height: 30px;
+  width: 75px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: 'Lobster', cursive;
+  border: 1px solid black;
+}
+
+.signUp-btn:hover {
+    background-color: aqua;
+    transition: 1s;
+}
+
+p {
+    
+
+}
+
+
+
+

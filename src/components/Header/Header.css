@@ -1,0 +1,70 @@
+/* easfoam sky aqua pale yellow */
+
+
+.wrapper {
+    display: flex;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #404040;
+    height: 65px;
+    width: 100%;
+    color: white;
+    align-items: center;
+    font-family: 'Lobster', cursive;
+
+}
+
+.logo {
+    height: 55px;
+    width: 250px;
+    display: flex;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+nav ul {
+    display: flex;
+    margin-right: 20px;
+   
+}
+
+nav ul li {
+ list-style-type: none;
+ margin-right: 50px;
+ text-decoration: none;
+ padding: 5px;
+ width: 100px;
+ border-radius: 10px;
+ color: black;
+ background: white;
+ justify-content: center;
+ display: flex;
+ border: 1px solid black;
+}
+
+nav ul li:hover {
+    background-color: aqua;
+    transition: 1s;
+}
+
+.myCart {
+    color: aqua;
+    transition: 1.5s;
+}
+
+p {
+    font-size: 25px;
+}
