@@ -1,7 +1,18 @@
 .products-wrapper {
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around
+}
+
+.products-logo {
+    display: flex;
+    justify-content: center;
+    color: aqua;
+    font-family: 'Lobster', cursive;
+    background-color: #404040;
+    padding: 20px;
+    font-size: 40px;
 }
 
 .product-wrapper {

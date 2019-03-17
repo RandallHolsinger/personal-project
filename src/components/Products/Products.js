@@ -44,7 +44,9 @@ class Products extends Component {
        return(
            <div >
                 <Header />
+                <p className='products-logo'>Products</p>
                 <div className='products-wrapper'>
+                
                 {mappedItems}
                 </div>
            </div>

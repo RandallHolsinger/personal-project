@@ -5,7 +5,8 @@ const initialState =  {
     username: '',
     cart: [],
     cartTotal: 0,
-    cartQuantity: 0
+    cartQuantity: 0,
+    main_img: ''
 }
 
 const UPDATE_USER = 'UPDATE_USER';
@@ -32,6 +33,8 @@ export function updateUser() {
 
 
 
+
+
 export default function reducer(state = initialState, action) {
     const {payload, type} = action;
     switch(type) {
@@ -40,6 +43,8 @@ export default function reducer(state = initialState, action) {
          return {...state, id, username}
        case CLEAR_USER:
          return {...state, id:0, username:''}
+     
+
         default:
         return state
     }

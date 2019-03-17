@@ -15,12 +15,12 @@ class Header extends Component {
                           <Link to={'/'} style={{textDecoration: 'none'}}>
                              <li>HOME</li>
                           </Link>
-                          {/* <Link> */}
-                           <li>HATS</li>
-                          {/* </Link>
-                          <Link> */}
+                          <Link to={'/products'} style={{textDecoration: 'none'}}>
+                           <li>PRODUCTS</li>
+                          </Link>
+                          {/* <Link>
                            <li>SHIRTS</li>
-                           {/* </Link> */}
+                           </Link> */}
                        </ul>
                          <Login />
                          <p>Cart</p> <i className="fas fa-shopping-cart fa-2x myCart"></i>
