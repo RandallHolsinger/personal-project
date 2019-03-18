@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Header from '../Header/Header'
 import axios from 'axios';
 import './ProductView.css'
 class ProductView extends Component {
@@ -8,15 +7,20 @@ class ProductView extends Component {
 
 
            this.state = {
-               product: {}
+               product: {},
+               cart: []
 
            }
        }
      
     // send this.props.match.params.productId through axios call.
 
-    addToCart = () => {
-
+    addToCart = (product) => {
+       axios.post('/api/cart', {product}).then(res => {
+          res.setState({
+              cart: res.data
+          })
+       }) 
     }
 
     componentDidMount() {
@@ -31,7 +35,6 @@ class ProductView extends Component {
         const {product} = this.state
         return (
           <div className='productView'>
-                <Header />
              <div className='proView-wrapper'>
                     <img className='product-img' src={product.main_img} alt={product.description}/>
                      <div className='desc-wrapper'>

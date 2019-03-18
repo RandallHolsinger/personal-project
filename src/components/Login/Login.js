@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux'
 import axios from 'axios';
 import './Login.css'
+import {updateUser, clearUser} from '../../redux/reducer'
+import {withRouter} from 'react-router-dom'
 
 class Login extends Component {
     constructor(props) {
@@ -17,6 +19,7 @@ class Login extends Component {
 
     componentDidMount(){
        this.checkUser();
+       this.getUser()
     }
     checkUser = async () => {
       const {id} = this.props;
@@ -24,13 +27,12 @@ class Login extends Component {
       if(!id) {
           try {
               let res = await axios.get(`/api/current`)
+              console.log(res.data)
               this.props.updateUser(res.data)
-              this.props.history.push('/private') //update route
           } catch (err) {
+              console.log(err)
           }
-      } else {
-          this.props.history.push('/private')// update route 
-      }
+      } 
     }
     
     handleUsername(e) {
@@ -49,8 +51,9 @@ class Login extends Component {
         try{
             const {username, password} = this.state
             let res = await axios.post('/auth/register', {username, password})
+            console.log('this is res from register', res )
             this.props.updateUser(res.data)
-            this.props.history.push('/private') // route
+            console.log('this is register')
         } catch(err) {
             console.log(err)
         }
@@ -62,17 +65,36 @@ class Login extends Component {
             let res = await axios.post('/auth/login', {username, password})
             console.log(res)
             this.props.updateUser(res.data)
-            this.props.history.push('/private') // route
+            console.log('this is login')
         } catch (err) {
             console.log(err)
         }
     }
+      getUser = async () => {
+          const {id} = this.props
+          if(!id) {
+              try {
+                  let res = await axios.get('/api/current')
+                  this.props.updateUser(res.data)
+              } catch (err) {
+                  console.log('error getting user id')
+              }
+          }
+      }
+  
+      logout = () => {
+          axios.post('/auth/logout')
+          this.props.clearUser();
+          console.log('this is logout front')
+      }
 
 
 
     render() {
         return (
-           this.props.user_id ? <button>Logout</button> : <div>
+           this.props.id ? <div className='user-info'>
+               <p style={{color: 'aqua', marginRight:'30px', fontSize:'30px'}}>Welcome {this.props.reduxState.username}! </p>
+               <button onClick={this.logout} className='logout-btn'>Logout</button></div> : <div>
            <div className='wrapper'>
              <input 
                value={this.state.username}
@@ -98,11 +120,13 @@ class Login extends Component {
 
 const mapStateToProps = (reduxState)=> {
     return {
-        id: reduxState.id
+        id: reduxState.id,
+        reduxState
     }
 }
 const mapDispatchToProps = {
-
+  updateUser,
+  clearUser
 }
-
-export default connect(mapStateToProps, mapDispatchToProps)(Login)
+const loginWithRouter = withRouter(Login)
+export default connect(mapStateToProps, mapDispatchToProps)(loginWithRouter)

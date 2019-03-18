@@ -29,6 +29,7 @@ module.exports = {
          const db = req.app.get('db')
          let user = await db.auth.login({username})
          user = user[0]
+         console.log(user)
          if(!user) {
              
             return res.sendStatus(401);
@@ -60,8 +61,7 @@ module.exports = {
      
      //product controllers
      
-     getAll: (req, res) => {
-        console.log('hit')
+      getAll: (req, res) => {
         const db = req.app.get('db')
 
         db.getAll_products().then(products => {
@@ -76,5 +76,16 @@ module.exports = {
       db.get_product(id).then(product => {
           res.status(200).send(product)
       })
+    },
+
+    //cart controllers
+
+    getUserProducts: (req, res) => {
+        const db = req.app.get('db')
+        const {user_id} = req.session.user
+
+        db.getAllCart_for_user([user_id]).then(products => {
+            res.status(200).send(products)
+        })
     }
 }

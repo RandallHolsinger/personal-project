@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import axios from 'axios';
 import './Products.css'
 import {Link} from 'react-router-dom'
-import Header from '../Header/Header'
 // import Product from '../Product/Product'
 
 class Products extends Component {
@@ -43,10 +42,8 @@ class Products extends Component {
        })
        return(
            <div >
-                <Header />
                 <p className='products-logo'>Products</p>
                 <div className='products-wrapper'>
-                
                 {mappedItems}
                 </div>
            </div>

@@ -59,12 +59,24 @@ input:focus {
     background-color: aqua;
     transition: 1s;
 }
-
-p {
-    
-
+.user-info {
+    display: flex;
+    align-items: center;
 }
 
+.logout-btn {
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Lobster', cursive;
+    border: 1px solid black;
+}
 
-
-
+.logout-btn:hover {
+    background-color: aqua;
+    transition: 1s;
+}

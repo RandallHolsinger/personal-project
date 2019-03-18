@@ -11,9 +11,7 @@ const initialState =  {
 
 const UPDATE_USER = 'UPDATE_USER';
 const CLEAR_USER = 'CLEAR_USER';
-const ADD_TO_CART = 'ADD_TO_CART';
-const UPDATE_CART_TOTAL = 'UPDATE_CART_TOTAL';
-const UPDATE_ITEM_QUANTITY = 'UPDATE_ITEM_QUANTITY';
+
 
 
 
@@ -24,9 +22,10 @@ export function clearUser(user) {
     }
 }
 
-export function updateUser() {
+export function updateUser(user) {
     return {
-        type: UPDATE_USER
+        type: UPDATE_USER,
+        payload: user
     }
 }
 

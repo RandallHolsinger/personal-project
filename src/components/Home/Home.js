@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
 import './Home.css'
-import Header from '../Header/Header'
 class Home extends Component {
   
 
     render() {
         return (
             <div>
-                <Header />
                 <p className='welcome-top'>Vinyard Vines</p>
                 <div className='home-img'></div>
                 <p className='welcome'>WELCOME</p>

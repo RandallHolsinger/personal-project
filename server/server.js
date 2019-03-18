@@ -48,3 +48,5 @@ app.post('/api/logout', ctrl.logout)
 app.get('/api/products', ctrl.getAll)
 
 app.get('/api/product/:id', ctrl.getOne)
+
+app.get('/api/cart/products', ctrl.getUserProducts)

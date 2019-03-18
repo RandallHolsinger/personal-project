@@ -17,8 +17,7 @@ create table cart (
   product_id integer,
   quantity integer,
   user_id integer,
-  
-)
+  )
 
 create table product_images (
    id serial primary key,
@@ -37,6 +36,8 @@ create table products (
   description text,
   category text
 )
+
+
 
 -- // Products
 -- // Hats
