@@ -93,7 +93,7 @@ class Login extends Component {
     render() {
         return (
            this.props.id ? <div className='user-info'>
-               <p style={{color: 'aqua', marginRight:'30px', fontSize:'30px'}}>Welcome {this.props.reduxState.username}! </p>
+               <p style={{color: 'white', marginRight:'30px', fontSize:'30px'}}>Welcome {this.props.reduxState.username}! </p>
                <button onClick={this.logout} className='logout-btn'>Logout</button></div> : <div>
            <div className='wrapper'>
              <input 

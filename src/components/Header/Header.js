@@ -25,7 +25,9 @@ class Header extends Component {
                            
                        </ul>
                          <Login />
-                         <p>Cart</p> <i className="fas fa-shopping-cart fa-2x myCart"></i>
+                         
+                         <p>Cart</p> <Link to={'/cart'}><i className="fas fa-shopping-cart fa-2x myCart"></i> </Link>
+                        
                     </nav>
                 </header>
                 

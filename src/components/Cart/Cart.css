@@ -1,0 +1,100 @@
+.cartLogo {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family: 'Lobster', cursive;
+    background-color: #404040;
+    padding: 20px;
+    font-size: 40px;
+    width: 450px;
+    margin: 40px auto 0px auto; 
+    border: 5px ridge aqua;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    
+}
+
+.cartView {
+    display: flex;
+    flex-direction: column;
+    border: 5px ridge aqua;
+    background-color: #404040;
+    width: 80%;
+    height: 100%;
+    min-height: 100vh;
+    margin: 50px auto;
+    box-shadow: 5px 5px 5px black;
+    border-radius: 10px;
+}
+
+.cart-item {
+    border: 3px ridge aqua;
+    border-radius: 10px;
+    margin: 20px;
+   
+}
+
+.cartTitle {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-title {
+    color: white;
+    font-family: 'Lobster', cursive;
+}
+
+.cart-img {
+    width: 300px;
+    height: 300px;
+    border: 5px ridge aqua;
+}
+
+.cart-price {
+  color: white;
+  font-family: 'Lobster', cursive;
+}
+
+.inc-dec {
+    display: flex;
+}
+
+.minus, .add {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    line-height: 30px;
+    color: black;
+    background-color: white;
+    border: 5px ridge aqua;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.minus:hover, .add:hover {
+    background-color: aqua;
+    border: 5px ridge white;
+    transition: .5s;
+}
+
+.minus {
+    margin-right: 20px;
+}
+
+.delete-btn {
+    height: 40px;
+    width: 150px;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    background: white;
+    border: 3px ridge aqua;
+    border-radius: 5px;
+}
+
+.delete-btn:hover {
+    background: aqua;
+    transition: .5s;
+    border: 3px ridge white;
+}

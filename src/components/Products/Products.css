@@ -8,15 +8,16 @@
 .products-logo {
     display: flex;
     justify-content: center;
-    color: aqua;
+    color: white;
     font-family: 'Lobster', cursive;
     background-color: #404040;
     padding: 20px;
     font-size: 40px;
-    width: 300px;
+    width: 450px;
     margin: 40px auto 0px auto; 
     border-radius: 10px;
-    box-shadow: 2px 2px 2px black;
+    box-shadow: 5px 5px 5px black;
+    border: 5px ridge aqua;
 }
 
 .product-wrapper {
@@ -25,24 +26,25 @@
     margin: 30px;
     border: 1px solid black;
     width: 400px;
-    box-shadow: 2px 2px 2px black;
+    box-shadow: 5px 5px 5px black;
     border-radius: 5px;
     background-color: #404040;
+    border: 5px ridge aqua;
 }
 
 .info {
     display: flex;
     font-family: 'Lobster', cursive;
     justify-content: center;
-    font-size: 18px;
-    color: aqua;
+    font-size: 20px;
+    color: white;
 }
 
 .price {
     display: flex;
     font-family: 'Lobster', cursive;
     justify-content: center;
-    color: aqua;
+    color: white;
 }
 
 .products-img {
@@ -58,6 +60,8 @@ hr {
     position: relative;
     top: 10px;
     text-decoration: none;
-    color: white;
+    background-color: aqua;
+    width: 350px;
+    height: 3px;
 }
 

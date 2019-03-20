@@ -7,38 +7,48 @@ input:focus {
 }
 .username {
   margin-right: 10px;
+  border: 2px ridge aqua;
   height: 25px;
   border-radius: 10px;
   width: 175px;
+  font-size: 18px;
 }
 
 .username:hover {
-    border: 2px solid aqua;
+    border: 2px ridge white;
+    background: aqua;
+    transition: .5s;
 }
 
 .password {
   margin-right: 10px;
   height: 25px;
+  border: 2px ridge aqua;
   border-radius: 10px;
   width: 175px;
+  font-size: 18px;
 }
 
 .password:hover {
-    border: 2px solid aqua;
+    border: 2px ridge white;
+    background: aqua;
+    transition: .5s;
+
 }
 
 .login-btn {
+  border: 3px ridge aqua;
   margin-right: 10px;
   height: 30px;
   width: 75px;
   border-radius: 10px;
   font-size: 15px;
   font-family: 'Lobster', cursive;
-  border: 1px solid black;
 
 }
 
 .login-btn:hover {
+    border: 3px ridge white;
     background-color: aqua;
     transition: 1s;
 }
@@ -49,13 +59,14 @@ input:focus {
   margin-right: 25px;
   height: 30px;
   width: 75px;
+  border: 3px ridge aqua;
   border-radius: 10px;
   font-size: 15px;
   font-family: 'Lobster', cursive;
-  border: 1px solid black;
 }
 
 .signUp-btn:hover {
+    border: 3px ridge white;
     background-color: aqua;
     transition: 1s;
 }
@@ -70,13 +81,14 @@ input:focus {
     margin-right: 10px;
     height: 30px;
     width: 100px;
+    border: 3px ridge aqua;
     border-radius: 10px;
     font-size: 15px;
     font-family: 'Lobster', cursive;
-    border: 1px solid black;
 }
 
 .logout-btn:hover {
     background-color: aqua;
+    border: 3px ridge white;
     transition: 1s;
 }

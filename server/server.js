@@ -43,10 +43,22 @@ app.post(`/auth/login`, ctrl. login)
 app.get('/api/current', ctrl.getUser)
 
 app.post('/api/logout', ctrl.logout)
+
 //product endpoints
 
 app.get('/api/products', ctrl.getAll)
 
 app.get('/api/product/:id', ctrl.getOne)
 
-app.get('/api/cart/products', ctrl.getUserProducts)
+
+
+//cart endpoints
+
+app.get('/api/cart/products', ctrl.getCartProducts)
+
+app.post('/api/cart/addToCart', ctrl.addToCart)
+
+// app.delete('/api/cart/:id', ctrl.deleteCart)
+
+// app.put('/api/cart/:id', ctrl.updateCart)
+

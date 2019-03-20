@@ -9,14 +9,14 @@ class ProductView extends Component {
            this.state = {
                product: {},
                cart: []
-
-           }
+            }
        }
      
     // send this.props.match.params.productId through axios call.
 
-    addToCart = (product) => {
-       axios.post('/api/cart', {product}).then(res => {
+    addToCart = () => {
+        const {product} = this.state
+       axios.post('/api/cart/addToCart', {product}).then(res => {
           res.setState({
               cart: res.data
           })
@@ -38,11 +38,13 @@ class ProductView extends Component {
              <div className='proView-wrapper'>
                     <img className='product-img' src={product.main_img} alt={product.description}/>
                      <div className='desc-wrapper'>
-                    <p className='view-info'>{product.title}</p>
-                    <p className='description'>{product.description}</p>
-                    <p className='proView-price'>Price: ${product.price}.00</p>
-                    <button className='cart-btn' onClick={this.addToCart}><i className="fas fa-shopping-cart fa-1x addCartLogo"></i>Add To Cart</button>
-                  </div>
+                       <p className='view-info'>{product.title}</p>
+                       <hr className='content-div' />
+                       <p className='description'>{product.description}</p>
+                       <hr className='content-div' />
+                       <p className='proView-price'>Price: ${product.price}.00</p>
+                      <button className='cart-btn' onClick={this.addToCart}><i className="fas fa-shopping-cart fa-1x addCartLogo"></i>Add To Cart</button>
+                     </div>
                </div>
            </div>
         )

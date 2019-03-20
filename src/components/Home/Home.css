@@ -1,7 +1,7 @@
 
 
 body {
-    background: linear-gradient(to bottom, #D3F1F3,#D3F1F3, aqua, #D3F1F3, aqua, #D3F1F3, #D3F1F3)   ;
+    background: #D3F1F3;
 }
 
 
@@ -26,6 +26,7 @@ body {
     width: 80%;
     margin: 50px auto;
     background-color: #404040;
+    border: 5px ridge aqua;
     border-radius: 5px;
     box-shadow: 5px 5px 5px 0px black;
 }
@@ -46,6 +47,7 @@ body {
     background-color: #404040;
     border-radius: 5px;
     box-shadow: 5px 5px 5px 0px black;
+    border: 5px ridge aqua;
 }
 
 .box-shirts img {
@@ -58,19 +60,20 @@ body {
 .welcome {
     display: flex;
     justify-content: center;
-    color: aqua;
+    color: white;
     font-family: 'Lobster', cursive;
     background-color: #404040;
     padding: 20px;
-    font-size: 40px;
+    font-size: 50px;
     margin: 0 auto;
+    box-shadow: 5px 5px 5px black;
     
 }
 
 .welcome-top {
     display: flex;
     justify-content: center;
-    color: aqua;
+    color: white;
     font-family: 'Lobster', cursive;
     background-color: #404040;
     padding: 20px;
@@ -79,15 +82,18 @@ body {
     width: 500px;
     height: 60px;
     border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
 }
 
 .item-intro {
     display: flex;
-    color: aqua;
+    color: white;
     font-family: 'Lobster', cursive;
-    text-transform: uppercase;
     font-size: 35px;
     justify-content: center;
+    border: 3px ridge aqua;
+    width: 200px;
+    margin: 20px auto;
 
 }
 

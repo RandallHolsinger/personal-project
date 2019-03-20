@@ -80,12 +80,20 @@ module.exports = {
 
     //cart controllers
 
-    getUserProducts: (req, res) => {
+    getCartProducts: (req, res) => {
         const db = req.app.get('db')
-        const {user_id} = req.session.user
-
-        db.getAllCart_for_user([user_id]).then(products => {
+        const {id} = req.session.user
+        db.getAllCart_for_user([id]).then(products => {
             res.status(200).send(products)
         })
+    },
+    
+    addToCart: (req, res) => {
+        const db = req.app.get('db')
+        const {product_id} = req.body.product
+        const {id} = req.session.user
+        
+
+        db.add_to_cart([product_id, id]).then(res.sendStatus(200))
     }
 }
