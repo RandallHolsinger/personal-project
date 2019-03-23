@@ -1,7 +1,11 @@
 
 
 body {
-    background: #D3F1F3;
+    background: linear-gradient(42deg, rgba(211,241,243,1) 14%, rgba(30,232,242,1) 34%, rgba(28,226,175,1) 100%);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 
@@ -22,7 +26,7 @@ body {
 .box-hats {
     display: flex;
     flex-direction: column;
-    height: 600px;
+    height: 50%;
     width: 80%;
     margin: 50px auto;
     background-color: #404040;
@@ -33,7 +37,7 @@ body {
 
 .box-hats img{
     width: 80%;
-    height: 300px;
+    height: 350px;
     margin: 0px auto;
     border: 3px ridge aqua;
 }
@@ -41,7 +45,8 @@ body {
 .box-shirts {
     display: flex;
     flex-direction: column;
-    height: 600px;
+    align-items: center;
+    height: 50%;
     width: 80%;
     margin: 20px auto;
     background-color: #404040;
@@ -52,7 +57,7 @@ body {
 
 .box-shirts img {
     width: 80%;
-    height: 300px;
+    height: 350px;
     margin: 0px auto;
     border: 3px ridge aqua;
 }
@@ -63,7 +68,7 @@ body {
     color: white;
     font-family: 'Lobster', cursive;
     background-color: #404040;
-    padding: 20px;
+    padding: 10px;
     font-size: 50px;
     margin: 0 auto;
     box-shadow: 5px 5px 5px black;
@@ -73,16 +78,21 @@ body {
 .welcome-top {
     display: flex;
     justify-content: center;
-    color: white;
-    font-family: 'Lobster', cursive;
+    align-items: center;
     background-color: #404040;
-    padding: 20px;
-    font-size: 60px;
     margin: 20px auto 0px auto;
-    width: 500px;
-    height: 60px;
+    width: 50%;
+    height: 20px;
     border-radius: 10px;
     box-shadow: 5px 5px 5px black;
+    padding: 20px
+}
+
+.welcome-top p {
+    font-family: 'Lobster', cursive;
+    color: white;
+    font-size: 60px;
+
 }
 
 .item-intro {
@@ -91,9 +101,9 @@ body {
     font-family: 'Lobster', cursive;
     font-size: 35px;
     justify-content: center;
-    border: 3px ridge aqua;
-    width: 200px;
+    width: 50%;
     margin: 20px auto;
+    text-decoration: aqua underline;
 
 }
 
@@ -101,17 +111,38 @@ body {
     display: flex;
     color: white;
     font-family: 'Lobster', cursive;
-    justify-content: center;
+    font-size: 30px;
+    margin: 20px auto;
+    padding: 20px;
 
 }
 
 .shop-now {
     display: flex;
-    color: aqua;
+    color: white;
     font-family: 'Lobster', cursive;
     justify-content: center;
     border: 3px solid aqua;
     width: 200px;
+    font-size: 30px;
     align-items: center;
-    margin: 0 auto;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+@media screen and (max-width: 850px) {
+    .welcome-top p {
+        font-size: 50px
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .welcome-top p {
+        font-size: 40px
+    }
+}
+@media screen and (max-width: 550px) {
+    .welcome-top p {
+        font-size: 30px
+    }
 }

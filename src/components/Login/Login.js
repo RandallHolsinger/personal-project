@@ -63,12 +63,11 @@ class Login extends Component {
         const {username, password} = this.state
         try {
             let res = await axios.post('/auth/login', {username, password})
-            console.log(res)
             this.props.updateUser(res.data)
-            console.log('this is login')
         } catch (err) {
             console.log(err)
         }
+        window.location.reload()
     }
       getUser = async () => {
           const {id} = this.props
@@ -83,8 +82,9 @@ class Login extends Component {
       }
   
       logout = () => {
-          axios.post('/auth/logout')
+          axios.post('/api/logout')
           this.props.clearUser();
+        
           console.log('this is logout front')
       }
 
@@ -92,10 +92,11 @@ class Login extends Component {
 
     render() {
         return (
+            
            this.props.id ? <div className='user-info'>
                <p style={{color: 'white', marginRight:'30px', fontSize:'30px'}}>Welcome {this.props.reduxState.username}! </p>
                <button onClick={this.logout} className='logout-btn'>Logout</button></div> : <div>
-           <div className='wrapper'>
+           <div className='login-wrapper'>
              <input 
                value={this.state.username}
                onChange={this.handleUsername}
@@ -112,8 +113,7 @@ class Login extends Component {
              <button onClick={this.login} className='login-btn'>Login</button>
              <button onClick={this.register} className='signUp-btn'>Sign Up</button>
             </div>
-
-           </div>
+            </div>
         )
     }
 }

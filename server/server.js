@@ -58,7 +58,11 @@ app.get('/api/cart/products', ctrl.getCartProducts)
 
 app.post('/api/cart/addToCart', ctrl.addToCart)
 
-// app.delete('/api/cart/:id', ctrl.deleteCart)
+app.delete('/api/cart/:product_id', ctrl.deleteCart)
 
-// app.put('/api/cart/:id', ctrl.updateCart)
+app.put('/api/cart/quantity/:product_id/:quantity', ctrl.updateQuantity)
+
+// stripe 
+
+app.post('/stripe/payment', ctrl.checkout)
 

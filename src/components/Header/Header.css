@@ -1,8 +1,9 @@
 /* easfoam sky aqua pale yellow */
 
 
-.wrapper {
-    display: flex;
+.header-wrapper {
+    display: block;
+    overflow: hidden;
 }
 
 header {
@@ -21,7 +22,7 @@ header {
 
 .logo {
     height: 55px;
-    width: 250px;
+    width: 200px;
     display: flex;
     background: white;
     border: 3px ridge aqua;
@@ -30,7 +31,10 @@ header {
     transition: 2s;
 }
 
-
+.nav-bar-items {
+    display: flex;
+    align-items: center;
+}
 
 
 nav {
@@ -42,12 +46,11 @@ nav {
 nav ul {
     display: flex;
     margin-right: 20px;
-   
 }
 
 nav ul li {
  list-style-type: none;
- margin-right: 40px;
+ margin-right: 10px;
  text-decoration: none;
  padding: 5px;
  width: 100px;
@@ -69,9 +72,41 @@ nav ul li:hover {
 
 .myCart {
     color: aqua;
-    transition: 1.5s;
+    transition: 1.5s
 }
 
-p {
+.cart-header {
     font-size: 25px;
+}
+
+
+
+.ham-icon {
+    display: none;
+    margin-left: 20px;
+    color: white;
+    border: 1px solid white  ;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.ham-icon:hover {
+   color: aqua;
+   border: 1px solid aqua;
+   transition: 1s;
+}
+
+@media screen and (max-width: 1500px) {
+    nav ul {
+        display: none;
+    }
+
+    .ham-icon {
+        display: block;
+    }
+    .logout-btn, .user-info {
+        display: none;
+    }
+    
 }

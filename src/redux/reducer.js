@@ -3,10 +3,6 @@
 const initialState =  {
     id: 0,
     username: '',
-    cart: [],
-    cartTotal: 0,
-    cartQuantity: 0,
-    main_img: ''
 }
 
 const UPDATE_USER = 'UPDATE_USER';

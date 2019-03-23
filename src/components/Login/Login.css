@@ -92,3 +92,222 @@ input:focus {
     border: 3px ridge white;
     transition: 1s;
 }
+
+.login-wrapper{
+    display: block;
+}
+.login-mobile-wrapper{
+    display: none;
+}
+.mobile-drop-down{
+    width: 80%;
+    height: 400px;
+    background: #404040;
+    padding: 20px;
+    border-left: 5px ridge aqua;
+    border-bottom: 5px ridge aqua;
+    border-right: 5px ridge aqua;
+    border-radius: 5px;
+    transition: height .2s;
+    margin-right: 3px;
+    margin-left: 3px;
+    position: absolute;
+    margin: 0 auto;
+    top: 80px;
+    right: 0px;
+    left: 0px;
+}
+
+.mobile-dropDown-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-login-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mobile-input {
+   display: flex;
+   flex-direction: column;
+}
+
+.mobile-btns {
+   display: flex;
+   justify-content: center;
+   margin-top: 10px;
+}
+
+.mobile-username {
+    margin: 5px auto;
+    border: 2px ridge aqua;
+    height: 25px;
+    border-radius: 10px;
+    width: 250px;
+    font-size: 18px;
+}
+
+.mobile-username:hover {
+    border: 2px ridge white;
+    background: aqua;
+    transition: .5s;
+}
+
+.mobile-password {
+    margin: 5px auto;
+    height: 25px;
+    border: 2px ridge aqua;
+    border-radius: 10px;
+    width: 250px;
+    font-size: 18px;
+}
+
+.mobile-password:hover {
+    border: 2px ridge white;
+    background: aqua;
+    transition: .5s;
+}
+
+.mobile-login-btn {
+    border: 3px ridge aqua;
+    margin-right: 10px;
+    height: 30px;
+    width: 125px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Lobster', cursive;
+}
+
+.mobile-login-btn:hover {
+    border: 3px ridge white;
+    background-color: aqua;
+    transition: 1s;
+}
+
+.mobile-signUp-btn {
+    border: 3px ridge aqua;
+    height: 30px;
+    width: 125px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Lobster', cursive;
+}
+
+.mobile-signUp-btn:hover {
+    border: 3px ridge white;
+    background-color: aqua;
+    transition: 1s;
+}
+
+.mobile-user-info {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   font-size: 30px;
+
+}
+
+.mobile-user-welcome {
+   display: flex;
+   flex-direction: column;
+   font-family: 'Lobster', cursive;
+   margin: 20px;
+   justify-content: center;
+   color: white;
+}
+
+
+.mobile-logout-btn {
+    border: 3px ridge aqua;
+    align-items: center;
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Lobster', cursive;
+    margin: 15px auto;
+}
+
+.dropDown-divide {
+    width: 90%;
+}
+
+.mobile-links-wrapper {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile-links-wrapper ul {
+    margin: 0px auto;
+    padding-inline-start: 0px;
+    padding: 5px 20px;
+}
+
+.mobile-links-wrapper ul li {
+    margin: 10px auto;
+    text-decoration: none;
+    padding: 5px;
+    width: 250px;
+    border-radius: 5px;
+    color: black;
+    background: white;
+    justify-content: center;
+    display: flex;
+    border: 5px ridge aqua;
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+
+}
+
+.mobile-links-wrapper ul li:hover {
+    background-color: aqua;
+    border: 5px ridge white;
+    transition: 1s;
+}
+
+
+@media (max-width: 1500px) {
+    .login-wrapper{
+        display: none;
+    }
+    .login-mobile-wrapper{
+        display: block;
+    }
+}
+
+@media (min-width: 1024px) {
+    .mobile-user-info {
+        flex-direction: row;
+    }
+
+    .mobile-user-welcome {
+        flex-direction: row;
+    }
+
+    .mobile-input {
+        flex-direction: row;
+    }
+    
+    .mobile-login-wrapper {
+        flex-direction: row;
+    }
+
+    .mobile-username {
+        margin-right: 20px;
+        width: 200px;
+    }
+
+    .mobile-password {
+        width: 200px;
+    }
+    
+    .mobile-signUp-btn, .mobile-login-btn {
+        width: 150px
+    }
+    
+}

@@ -13,7 +13,7 @@
     background-color: #404040;
     padding: 20px;
     font-size: 40px;
-    width: 450px;
+    width: 40%;
     margin: 40px auto 0px auto; 
     border-radius: 10px;
     box-shadow: 5px 5px 5px black;
@@ -45,6 +45,7 @@
     font-family: 'Lobster', cursive;
     justify-content: center;
     color: white;
+    font-size: 25px;
 }
 
 .products-img {

@@ -17,10 +17,11 @@ class ProductView extends Component {
     addToCart = () => {
         const {product} = this.state
        axios.post('/api/cart/addToCart', {product}).then(res => {
-          res.setState({
+          this.setState({
               cart: res.data
           })
        }) 
+       this.props.history.push('/cart')
     }
 
     componentDidMount() {
@@ -36,12 +37,11 @@ class ProductView extends Component {
         return (
           <div className='productView'>
              <div className='proView-wrapper'>
+                     <p className='mobile-view-info'>{product.title}</p>
                     <img className='product-img' src={product.main_img} alt={product.description}/>
                      <div className='desc-wrapper'>
                        <p className='view-info'>{product.title}</p>
-                       <hr className='content-div' />
                        <p className='description'>{product.description}</p>
-                       <hr className='content-div' />
                        <p className='proView-price'>Price: ${product.price}.00</p>
                       <button className='cart-btn' onClick={this.addToCart}><i className="fas fa-shopping-cart fa-1x addCartLogo"></i>Add To Cart</button>
                      </div>

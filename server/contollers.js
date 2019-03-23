@@ -1,4 +1,6 @@
 const bcrypt = require('bcryptjs')
+require('dotenv').config()
+const stripe = require('stripe')(process.env.STRIPE_SECRET)
 
 module.exports = {
     
@@ -18,9 +20,7 @@ module.exports = {
        let hash = bcrypt.hashSync(password, salt)
        let user = await db.auth.register({username, password: hash});
        user = user[0]
-       console.log({before: session})
        session.user = user
-       console.log({after: session})
        res.status(200).send(session.user)
      },
      login: async (req, res) => {
@@ -29,20 +29,16 @@ module.exports = {
          const db = req.app.get('db')
          let user = await db.auth.login({username})
          user = user[0]
-         console.log(user)
          if(!user) {
              
             return res.sendStatus(401);
          }
          let authenticated = bcrypt.compareSync(password, user.password)
-         console.log(user.username)
          if(authenticated) {
              delete user.password;
              session.user = user
              res.status(200).send(session.user)
-             console.log(1)
          } else {
-             console.log(2)
              res.sendStatus(401)
          }
       },
@@ -94,6 +90,42 @@ module.exports = {
         const {id} = req.session.user
         
 
-        db.add_to_cart([product_id, id]).then(res.sendStatus(200))
+        db.add_to_cart([product_id, id]).then(() => res.sendStatus(200))
+    },
+
+    deleteCart: (req, res) => {
+        const db = req.app.get('db')
+        const {id} = req.session.user;
+        const {product_id} = req.params
+
+        db.delete_from_cart([id, product_id]).then(products => res.status(200).send(products))
+    },
+    
+    updateQuantity: (req, res) => {
+        const db = req.app.get('db')
+        const {id} = req.session.user
+        const {product_id, quantity} = req.params
+    
+
+        db.update_quantity_cart([quantity, product_id, id]).then((products)=> res.status(200).send(products) )
+    },
+
+    // stripe payment checkout
+
+    checkout: (req, res) => {
+        const {amount, token:{id}} = req.body
+        stripe.charges.create({
+            source: id,
+            amount, 
+            currency: 'USD'
+        },(err, charge) => {
+            if(err) {
+                return res.status(200).send(err)
+            } else {
+                return res.status(200).send(charge)
+            }
+        });
+
+
     }
 }

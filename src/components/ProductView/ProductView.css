@@ -7,18 +7,23 @@
 }
 .view-info {
   color: white;
-  width: 400px;
-  font-family: 'Lobster', cursive;;
+  width: 80%;
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
+  margin: 20px auto 0px auto;
+  text-decoration: aqua underline;
 }
 .description {
   color: white;
   font-family: 'Lobster', cursive;
-  width: 300px;
-  margin: 0 auto;
+  width: 80%;
   justify-content: center;
   align-items: center;
+  font-size: 26px;
+  margin: 40px auto;
 
 }
+
 .proView-wrapper {
   display: flex;
   align-items: center;
@@ -27,43 +32,47 @@
   border-radius: 5px;
   margin: 50px auto;
   width: 80%;
-  height: 700px;
   background-color: #404040;
   box-shadow: 10px 10px 10px 0px black;
+  padding: 30px;
 }
 
 .desc-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-right: 100px;
   border: 5px ridge aqua;
   border-radius: 5px;
-  padding: 20px;
   height: 600px;
-  width: 500px;
-  box-sizing: border-box;
+  width: 40%;
+  box-shadow: 2px 2px 2px black;
 }
 
 .product-img {
-  width: 500px;
+  width: 40%;
   height: 600px;
   border: 5px ridge aqua;
   border-radius: 5px;
   box-sizing: border-box;
   margin-right: 30px;
+  box-shadow: 2px 2px 2px black;
 }
 .cart-btn {
-  margin-left: 20px;
+  margin: 0 auto;
   height: 50px;
-  width: 200px;
+  width: 80%;
   border-radius: 10px;
   font-size: 30px;
   font-family: 'Lobster', cursive;
-  border: 1px solid black;
-  background-color: aqua;
-  color: white;
+  border: 5px ridge aqua;
+  background-color: white;
+  color: black;
   cursor: pointer;
+}
+
+.cart-btn:hover {
+  background-color: aqua;
+  border: 5px ridge white;
+  transition: .5s;
 }
 
 .addCartLogo {
@@ -74,11 +83,34 @@
     font-family: 'Lobster', cursive;
     justify-content: center;
     color: white;
+    font-size: 30px;
+    align-items: center;
+    margin: 20px auto;
 }
 
-.content-div {
-  margin-bottom: 20px;
-  width: 350px;
-  height: 3px;
-  background-color: aqua;
+.mobile-view-info {
+  color: white;
+  font-family: 'Lobster', cursive;
+  font-size: 40px;
+  text-decoration: aqua underline;
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+    .proView-wrapper {
+      flex-direction: column;
+    }
+    .product-img {
+      margin: 20px auto 0px auto;
+      width: 80%;
+    }
+
+    .desc-wrapper {
+      margin: 20px auto 20px auto;
+      width: 80%;
+    }
+
+    .mobile-view-info {
+      display: block;
+    }
 }

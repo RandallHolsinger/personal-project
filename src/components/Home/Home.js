@@ -6,9 +6,12 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <p className='welcome-top'>~ Vinyard Vines ~</p>
+                <div className='welcome-top'>
+                   <p>~ Vinyard Vines ~</p>
+                </div>
                 <div className='home-img'></div>
-                <p className='welcome'>Welcome</p>
+                
+                  <p className='welcome'>Welcome</p>
                       
                     <div className='welcome-wrapper'>
                       <div className='box-hats'>
