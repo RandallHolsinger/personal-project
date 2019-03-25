@@ -2,6 +2,7 @@ import React, {Component} from 'react'
 import axios from 'axios';
 import './Products.css'
 import {Link} from 'react-router-dom'
+import queryString from 'query-string'
 // import Product from '../Product/Product'
 
 class Products extends Component {
@@ -16,14 +17,21 @@ class Products extends Component {
    
 
    componentDidMount() {
-      axios.get(`/api/products`).then(res => {
-         this.setState({
-            products: res.data
-         })
-     })
+       window.onhashchange = this.getInitialProducts
+       this.getInitialProducts()
+    }
+    
+    getInitialProducts = () => {
+        console.log(this.props.location)
+        const values = queryString.parse(this.props.location.search)
+        console.log(window)
+       axios.get(`/api/productsByCategory?category=${values.category}`).then(res => {
+          this.setState({
+             products: res.data
+          })
+      })
+        
    }
-
-   
 
    render() {
        var mappedItems = this.state.products.map((product, index) => {

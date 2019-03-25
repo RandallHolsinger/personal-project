@@ -74,6 +74,15 @@ module.exports = {
       })
     },
 
+    getProductsByCategory: (req, res) => {
+       const db = req.app.get('db')
+       const {category} = req.query;
+       console.log(category)
+       db.getAll_products_category([category]).then(response => {
+           res.status(200).send(response)
+       })
+    },
+
     //cart controllers
 
     getCartProducts: (req, res) => {

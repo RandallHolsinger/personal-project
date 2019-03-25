@@ -51,6 +51,8 @@ app.get('/api/products', ctrl.getAll)
 
 app.get('/api/product/:id', ctrl.getOne)
 
+app.get('/api/productsByCategory', ctrl.getProductsByCategory)
+
 
 
 //cart endpoints
