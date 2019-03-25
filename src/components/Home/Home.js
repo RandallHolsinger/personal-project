@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './Home.css'
+import {Link} from 'react-router-dom'
 class Home extends Component {
   
 
@@ -18,14 +19,18 @@ class Home extends Component {
                         <p className='item-intro'>Hats</p>
                         <img src='https://media.thetab.com/blogs.dir/9/files/2017/05/vv-940x480.jpg' alt='hats' />
                         <p className='home-content'>Take a look at our fun and stylish hats! Perfect for any boat trip or day at the beach!</p>
-                        <p className='shop-now'>Shop Hats</p>
+                        <Link to={'/products?category=hats'} style={{textDecoration: 'none' }}>
+                          <p className='shop-now'>Shop Hats</p>
+                        </Link>
                       </div>
 
                       <div className='box-shirts'>
                            <p className='item-intro'>Shirts</p>
-                           <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvfq1PiN_-4sJ0l6K0-zUDyIdmwBXOR8_VOEW289q8WqtbyezqRQ' alt='shirts' />
+                           <img src='https://www.vineyardvines.com/on/demandware.static/-/Sites-Vineyard-Vines-Library/default/dwd1205524/images/landing/shep_ian_story_hero_lrg.jpg' alt='shirts' />
                            <p className='home-content'>Take a look at our fashionable shirts! Perfect for any occasion!</p>
-                           <p className='shop-now'>Shop Shirts</p>
+                           <Link to={'/products?category=shirts'} style={{textDecoration: 'none' }}>
+                             <p className='shop-now'>Shop Shirts</p>
+                           </Link>
                       </div>
                       </div>
                    

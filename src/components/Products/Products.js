@@ -60,11 +60,13 @@ class Products extends Component {
                 </div>
             )
         })
-        return (
-            <div >
+        
 
+        return (
+            <div>
                 <p className='products-logo'>Products</p>
                 <div className='products-wrapper'>
+                
                     {mappedItems}
                 </div>
             </div>

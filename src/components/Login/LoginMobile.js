@@ -130,8 +130,12 @@ class LoginMobile extends Component {
                                   <Link to={'/products'} style={{textDecoration: 'none' }}>
                                     <li>Products</li>
                                   </Link>
+                                  <Link to={'/products?category=hats'} style={{textDecoration: 'none' }}>
                                    <li>Hats</li>
-                                   <li>Shirts</li>
+                                   </Link>
+                                   <Link to={'/products?category=shirts'} style={{textDecoration: 'none' }}>
+                                     <li>Shirts</li>
+                                   </Link>
                                 </ul>
                              </div>
                         </div>

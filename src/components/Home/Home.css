@@ -99,7 +99,7 @@ body {
     display: flex;
     color: white;
     font-family: 'Lobster', cursive;
-    font-size: 35px;
+    font-size: 40px;
     justify-content: center;
     width: 50%;
     margin: 20px auto;
@@ -122,12 +122,19 @@ body {
     color: white;
     font-family: 'Lobster', cursive;
     justify-content: center;
-    border: 3px solid aqua;
+    border: 3px ridge white;
+    border-radius: 10px;
     width: 200px;
     font-size: 30px;
     align-items: center;
-    padding: 20px;
-    margin: 20px auto;
+    padding: 10px;
+    margin: 10px auto 40px auto;
+}
+
+.shop-now:hover {
+    border: 3px ridge aqua;
+    color: aqua;
+    transition: .5s;
 }
 
 @media screen and (max-width: 850px) {
