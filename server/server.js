@@ -22,7 +22,7 @@ app.use(session({
     }),
     secret: SESSION_SECRET,
     resave: false,
-    saveUninitialized: true, //look into values
+    saveUninitialized: true,
     cookie: {
        maxAge: 100000000000
     }
