@@ -139,17 +139,52 @@ body {
 
 @media screen and (max-width: 850px) {
     .welcome-top p {
-        font-size: 50px
+        font-size: 50px;
+    }
+    .welcome {
+        font-size: 50px;
     }
 }
 
 @media screen and (max-width: 700px) {
     .welcome-top p {
-        font-size: 40px
+        font-size: 40px;
+    }
+
+    .welcome {
+        font-size: 40px;
+    }
+
+    .box-hats {
+        width: 95%;
+    }
+
+    .box-shirts {
+        width: 95%;
     }
 }
 @media screen and (max-width: 550px) {
     .welcome-top p {
-        font-size: 30px
+        font-size: 30px;
+    }
+
+    .welcome {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .welcome-top p {
+        font-size: 25px;
+    }
+
+    .welcome {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .welcome-top {
+        width: 70%
     }
 }

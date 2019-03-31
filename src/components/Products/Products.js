@@ -51,7 +51,7 @@ class Products extends Component {
                     <Link to={`/product/view/${product.product_id}`} style={{ textDecoration: 'none' }} >
                         <div key={index}>
                             <p className='info'>{product.title}</p>
-                            <img className='products-img' src={product.main_img} alt={product.description} style={{ width: '300px', height: '300px' }} />
+                            <img className='products-img' src={product.main_img} alt={product.description}/>
                             <hr />
                             <p className='price'>Price: ${product.price}.00</p>
                         </div>
