@@ -222,10 +222,11 @@ input:focus {
 
 .mobile-logout-btn {
     border: 3px ridge aqua;
+    background-color: white;
     align-items: center;
     height: 30px;
     width: 200px;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 15px;
     font-family: 'Lobster', cursive;
     margin: 15px auto;
@@ -246,6 +247,7 @@ input:focus {
     margin: 0px auto;
     padding-inline-start: 0px;
     padding: 5px 20px;
+    width: 80%;
 }
 
 .mobile-links-wrapper ul li {
@@ -255,7 +257,7 @@ input:focus {
     width: 250px;
     border-radius: 5px;
     color: black;
-    background: white;
+    background-color: white;
     justify-content: center;
     display: flex;
     border: 5px ridge aqua;
@@ -310,4 +312,10 @@ input:focus {
         width: 150px
     }
     
+}
+
+@media screen and (max-width: 500px) {
+    .mobile-links-wrapper ul li {
+        width: 90%;
+    }
 }

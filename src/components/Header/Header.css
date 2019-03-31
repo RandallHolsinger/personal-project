@@ -28,7 +28,6 @@ header {
     border: 3px ridge aqua;
     border-radius: 5px;
     margin-left: 20px;
-    transition: 2s;
 }
 
 .nav-bar-items {
@@ -72,7 +71,7 @@ nav ul li:hover {
 
 .myCart {
     color: aqua;
-    transition: 1.5s
+
 }
 
 .cart-header {
@@ -110,3 +109,34 @@ nav ul li:hover {
     }
     
 }
+@media screen and (max-width: 420px) {
+    .logo {
+        width: 150px;
+    }
+
+    .cart-header {
+       font-size: 25px;
+        margin-left: 10px;
+    }
+
+    .myCart {
+        font-size: 25px;
+    }
+
+    .ham-icon {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    .cart-header{ 
+       font-size: 20px
+    }
+
+    .logo {
+        width: 125px;
+    }
+}
+
+

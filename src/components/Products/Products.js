@@ -23,9 +23,8 @@ class Products extends Component {
 
     getInitialProducts = () => {
         if (this.props.location.search) {
-            console.log(this.props.location)
             const values = queryString.parse(this.props.location.search)
-            console.log(window)
+            console.log(values)
             axios.get(`/api/productsByCategory?category=${values.category}`).then(res => {
                 this.setState({
                     products: res.data
@@ -61,7 +60,6 @@ class Products extends Component {
             )
         })
         
-
         return (
             <div>
                 <p className='products-logo'>Products</p>

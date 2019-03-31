@@ -1,5 +1,4 @@
 .products-wrapper {
-    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around
@@ -13,8 +12,8 @@
     background-color: #404040;
     padding: 20px;
     font-size: 40px;
-    width: 40%;
-    margin: 40px auto 0px auto; 
+    width: 50%;
+    margin: 20px auto 0px auto; 
     border-radius: 10px;
     box-shadow: 5px 5px 5px black;
     border: 5px ridge aqua;
@@ -23,8 +22,7 @@
 .product-wrapper {
     display: flex;
     justify-content: center;
-    margin: 30px;
-    border: 1px solid black;
+    margin: 30px auto;
     width: 400px;
     box-shadow: 5px 5px 5px black;
     border-radius: 5px;

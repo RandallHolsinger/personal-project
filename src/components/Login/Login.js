@@ -27,7 +27,6 @@ class Login extends Component {
       if(!id) {
           try {
               let res = await axios.get(`/api/current`)
-              console.log(res.data)
               this.props.updateUser(res.data)
           } catch (err) {
               console.log(err)
