@@ -218,17 +218,19 @@
 }
 
 @media screen and (max-width: 1023px) {
+   
     .cart-item {
         flex-direction: column;
         justify-content: center;
     }
 
     .cart-info {
-      margin: 5px auto 10px auto;
+      margin: 2px auto 30px
     }
 
     .cart-item-desc {
        font-size: 20px;
+       margin: 5px auto;
     }
 
     .item-title {
@@ -238,6 +240,7 @@
 
     .cart-desc {
         font-size: 30px;
+        margin: 10px auto 0px auto;
     }
 
     .checkout-wrapper{
