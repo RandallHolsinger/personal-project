@@ -35,6 +35,7 @@
     align-items: center;
     box-shadow: 2px 2px 2px black;
     justify-content: space-around;
+    padding: 10px;
 }
 
 .cart-item-desc {
@@ -46,7 +47,7 @@
 .item-title {
     color: white;
     font-family: 'Lobster', cursive;
-    font-size: 20px;
+    font-size: 30px;
     text-decoration: aqua underline;
     max-width: 300px
 }
@@ -56,7 +57,7 @@
     max-width: 350px;
     color: white;
     font-family: 'Lobster', cursive;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .cart-info {

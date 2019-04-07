@@ -66,7 +66,6 @@ class Cart extends Component {
 
 
     render() {
-        console.log(this)
         let mappedCart = this.state.cart.map((item, index) => {
             return (
                 <div key={index}>

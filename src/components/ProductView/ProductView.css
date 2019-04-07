@@ -114,14 +114,27 @@
     .desc-wrapper {
       margin: 20px auto 20px auto;
       width: 80%;
+      height: auto;
     }
 
     .mobile-view-info {
       display: block;
+      font-size: 30px;
+      margin: 5px auto;
+
     }
 
     .cart-btn {
       font-size: 30px;
+      margin: 10px auto;
+    }
+
+    .view-info {
+      font-size: 24px;
+    }
+  
+    .description {
+       font-size: 20px;
     }
 }
 

@@ -28,6 +28,7 @@
     border-radius: 5px;
     background-color: #404040;
     border: 5px ridge aqua;
+    padding: 5px;
 }
 
 .info {
@@ -62,7 +63,7 @@ hr {
     top: 10px;
     text-decoration: none;
     background-color: aqua;
-    width: 90%;
+    width: 220px;
     height: 3px;
 }
 
@@ -74,5 +75,13 @@ hr {
    .products-img {
        width: 200px;
        height: 200px;
+   }
+
+   .info {
+       font-size: 15px;
+   }
+
+   .price {
+       font-size: 20px;
    }
 }
