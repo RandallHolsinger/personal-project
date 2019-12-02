@@ -5,7 +5,7 @@ const massive = require('massive');
 const session = require('express-session')
 const ctrl = require('./contollers')
 
-const pg= require('pg')
+const pg = require('pg')
 const pgSession = require('connect-pg-simple')(session)
 
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env;
@@ -24,22 +24,22 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     cookie: {
-       maxAge: 100000000000
+        maxAge: 8*60*60*1000
     }
 }))
 
 massive(CONNECTION_STRING).then(db => {
     app.set('db',db)
     console.log('You Are Connected To Database')
-
-    app.listen(SERVER_PORT, ()=> console.log(`Making 💵  Money 💵  On Port: ${SERVER_PORT}`))
+   
+    app.listen(SERVER_PORT, ()=>console.log(`Making 💵  Money 💵  On Port: ${SERVER_PORT}`))
 })
 
 // authentication endpoints
 
 app.post('/auth/register', ctrl.register)
 
-app.post(`/auth/login`, ctrl. login) 
+app.post(`/auth/login`, ctrl.login) 
 
 app.get('/api/current', ctrl.getUser)
 
